@@ -1,3 +1,4 @@
+import 'package:dark_restaurant_ui/screens/home.dart';
 import 'package:dark_restaurant_ui/utils/constants.dart';
 import 'package:flutter/material.dart';
 
@@ -11,13 +12,13 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      color: appBackgroundColor,
-      // theme: ThemeData(colorScheme: ColorScheme(background: appBackgroundColor)),
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
-    );
+        color: appBackgroundColor,
+        theme: ThemeData(
+            fontFamily: "Poppins",
+            colorScheme: ColorScheme.fromSwatch(
+                backgroundColor: appBackgroundColor,
+                brightness: Brightness.dark)),
+        debugShowCheckedModeBanner: false,
+        home: const Home());
   }
 }
