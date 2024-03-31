@@ -28,7 +28,7 @@ class _DetailsFoodState extends State<DetailsFood> {
             },
             icon: const Icon(
               Icons.arrow_back,
-              size: 28,
+              size: 25,
             )),
         actions: [
           IconButton(
@@ -42,8 +42,9 @@ class _DetailsFoodState extends State<DetailsFood> {
               icon: Icon(
                 !isFav ? Icons.favorite_outline : Icons.favorite_rounded,
                 color: isFav ? Colors.red : appBackgroundColor,
-                size: 28,
-              ))
+                size: 25,
+              )),
+              const SizedBox(width: 8,),
         ],
       ),
       body: SafeArea(
@@ -136,6 +137,7 @@ class _DetailsFoodState extends State<DetailsFood> {
                       ],
                     ),
                   ),
+                  const SizedBox(width: 10,),
                   Container(
                     width: width * .25,
                     padding: const EdgeInsets.all(10),
@@ -162,7 +164,7 @@ class _DetailsFoodState extends State<DetailsFood> {
                     ),
                   ),
                   Transform.translate(
-                    offset: const Offset(65, 0),
+                    offset: const Offset(60, 0),
                     child: Transform.rotate(
                       angle: 17.27,
                       child: Container(
