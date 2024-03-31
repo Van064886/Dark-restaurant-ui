@@ -1,8 +1,8 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:dark_restaurant_ui/models/food.dart';
 import 'package:dark_restaurant_ui/utils/constants.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class DetailsFood extends StatefulWidget {
   Food food;
@@ -18,7 +18,6 @@ class _DetailsFoodState extends State<DetailsFood> {
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
-    final height = MediaQuery.of(context).size.height;
 
     return Scaffold(
       appBar: AppBar(
@@ -54,10 +53,13 @@ class _DetailsFoodState extends State<DetailsFood> {
           child: Column(
             children: [
               Center(
-                child: Image.asset(
-                  widget.food.picture!,
-                  width: width * .9,
-                  height: width * .9,
+                child: Hero(
+                  tag: widget.food.id!,
+                  child: Image.asset(
+                    widget.food.picture!,
+                    width: width * .9,
+                    height: width * .9,
+                  ),
                 ),
               ),
               const SizedBox(

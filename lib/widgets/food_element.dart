@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:dark_restaurant_ui/models/food.dart';
 import 'package:dark_restaurant_ui/screens/details_food.dart';
 import 'package:dark_restaurant_ui/utils/constants.dart';
@@ -84,10 +86,13 @@ class _FoodElementState extends State<FoodElement> {
             Positioned(
                 bottom: height * .11,
                 left: ((width * .4) - (width * .35)) / 2,
-                child: Image.asset(
-                  widget.food.picture!,
-                  width: width * .35,
-                  height: width * .35,
+                child: Hero(
+                  tag: widget.food.id!,
+                  child: Image.asset(
+                    widget.food.picture!,
+                    width: width * .35,
+                    height: width * .35,
+                  ),
                 ))
           ],
         ),

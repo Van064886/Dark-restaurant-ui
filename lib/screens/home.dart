@@ -1,11 +1,9 @@
-import 'dart:ffi';
 import 'dart:math';
 import 'package:dark_restaurant_ui/models/food.dart';
 import 'package:dark_restaurant_ui/utils/constants.dart';
 import 'package:dark_restaurant_ui/widgets/bottom_navigation_element.dart';
 import 'package:dark_restaurant_ui/widgets/food_element.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -44,60 +42,60 @@ class _HomeState extends State<Home> {
 
     return Scaffold(
       bottomNavigationBar: Container(
-          height: height * .09,
-          color: appSecondBackgroundColor,
-          padding: const EdgeInsets.symmetric(horizontal: 25),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              BottomNavigationElement(
-                activeScreen: activeScreen,
-                screen: 1,
-                onTap: () {
-                  setState(() {
-                    activeScreen = 1;
-                  });
-                },
-                label: "Home",
-                icon: Icons.home,
-              ),
-              BottomNavigationElement(
-                activeScreen: activeScreen,
-                screen: 2,
-                onTap: () {
-                  setState(() {
-                    activeScreen = 2;
-                  });
-                },
-                label: "Explore",
-                icon: Icons.shop,
-              ),
-              BottomNavigationElement(
-                activeScreen: activeScreen,
-                screen: 3,
-                onTap: () {
-                  setState(() {
-                    activeScreen = 3;
-                  });
-                },
-                label: "Wishlist",
-                icon: Icons.favorite,
-              ),
-              BottomNavigationElement(
-                activeScreen: activeScreen,
-                screen: 4,
-                onTap: () {
-                  setState(() {
-                    activeScreen = 4;
-                  });
-                },
-                label: "Profile",
-                icon: Icons.person,
-              ),
-            ],
-          ),
+        height: height * .09,
+        color: appSecondBackgroundColor,
+        padding: const EdgeInsets.symmetric(horizontal: 25),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            BottomNavigationElement(
+              activeScreen: activeScreen,
+              screen: 1,
+              onTap: () {
+                setState(() {
+                  activeScreen = 1;
+                });
+              },
+              label: "Home",
+              icon: Icons.home,
+            ),
+            BottomNavigationElement(
+              activeScreen: activeScreen,
+              screen: 2,
+              onTap: () {
+                setState(() {
+                  activeScreen = 2;
+                });
+              },
+              label: "Explore",
+              icon: Icons.shop,
+            ),
+            BottomNavigationElement(
+              activeScreen: activeScreen,
+              screen: 3,
+              onTap: () {
+                setState(() {
+                  activeScreen = 3;
+                });
+              },
+              label: "Wishlist",
+              icon: Icons.favorite,
+            ),
+            BottomNavigationElement(
+              activeScreen: activeScreen,
+              screen: 4,
+              onTap: () {
+                setState(() {
+                  activeScreen = 4;
+                });
+              },
+              label: "Profile",
+              icon: Icons.person,
+            ),
+          ],
         ),
+      ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
